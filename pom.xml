@@ -42,6 +42,11 @@
     <url>https://innoq.com</url>
   </organization>
 
+  <ciManagement>
+    <url>https://travis-ci.org/innoq/spring-boot-actuator-extensions</url>
+    <system>Travis CI</system>
+  </ciManagement>
+
   <issueManagement>
     <url>https://github.com/innoq/spring-boot-actuator-extensions/issues</url>
     <system>GitHub Issues</system>
