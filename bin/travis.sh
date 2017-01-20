@@ -37,8 +37,8 @@ if [ -z "${TRAVIS_PULL_REQUEST}" ]; then
   exit 1
 fi
 
-if [ -z "${SONAR_HOST}" ]; then
-  error "SONAR_HOST not set"
+if [ -z "${SONAR_URI}" ]; then
+  error "SONAR_URI not set"
   exit 1
 fi
 
