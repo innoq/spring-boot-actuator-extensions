@@ -158,17 +158,17 @@
           <groupId>com.mycila</groupId>
           <artifactId>license-maven-plugin</artifactId>
           <version>3.0</version>
-            <configuration>
-              <excludes>
-                <exclude>.editorconfig</exclude>
-                <exclude>.gitattributes</exclude>
-                <exclude>.mvn/**</exclude>
-                <exclude>LICENSE*</exclude>
-                <exclude>mvnw*</exclude>
-              </excludes>
-              <failIfUnknown>true</failIfUnknown>
-              <header>LICENSE_HEADER</header>
-            </configuration>
+          <configuration>
+            <excludes>
+              <exclude>.editorconfig</exclude>
+              <exclude>.gitattributes</exclude>
+              <exclude>.mvn/**</exclude>
+              <exclude>LICENSE*</exclude>
+              <exclude>mvnw*</exclude>
+            </excludes>
+            <failIfUnknown>true</failIfUnknown>
+            <header>LICENSE_HEADER</header>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
