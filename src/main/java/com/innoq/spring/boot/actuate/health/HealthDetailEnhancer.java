@@ -33,7 +33,7 @@ import static java.util.Objects.requireNonNull;
  */
 public final class HealthDetailEnhancer implements HealthIndicator {
 
-    final private HealthIndicator indicator;
+    private final HealthIndicator indicator;
     private final Map<String, Supplier<?>> details;
 
     private HealthDetailEnhancer(HealthIndicator indicator, Map<String, Supplier<?>> details) {
