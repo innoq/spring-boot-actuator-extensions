@@ -50,6 +50,30 @@ public final class HealthDetailEnhancer implements HealthIndicator {
         return new Builder();
     }
 
+    /**
+     * Creates a new {@link Builder} with the given fixed detail for constructing a new {@link
+     * HealthDetailEnhancer}.
+     *
+     * @param key   the key used to store the details value into the health object
+     * @param value the details value to store
+     * @return a new builder for creating a new enhancer instance
+     */
+    public static Builder withDetail(String key, Object value) {
+        return create().withDetail(key, value);
+    }
+
+    /**
+     * Creates a new {@link Builder} with the given dynamic detail for constructing a new {@link
+     * HealthDetailEnhancer}.
+     *
+     * @param key   the key used to store the details value into the health object
+     * @param value a supplier which is used to calculate the details value
+     * @return a new builder for creating a new enhancer instance
+     */
+    public static Builder withDetail(String key, Supplier<?> value) {
+        return create().withDetail(key, value);
+    }
+
     @Override
     public Health health() {
         final Health health = indicator.health();

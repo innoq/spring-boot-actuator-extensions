@@ -35,7 +35,7 @@ public class HealthDetailEnhancerTest {
     @Test
     public void health_should_contain_added_fixed_detail() throws Exception {
         HealthDetailEnhancer sut = HealthDetailEnhancer
-            .create().withDetail("foo", "bar").enhance(FixedHealthIndicator.up());
+            .withDetail("foo", "bar").enhance(FixedHealthIndicator.up());
 
         Health health = sut.health();
 
@@ -51,7 +51,7 @@ public class HealthDetailEnhancerTest {
                 .withDetail("foo", "bar")
                 .build());
         HealthDetailEnhancer sut = HealthDetailEnhancer
-            .create().withDetail("bar", "foo").enhance(indicator);
+            .withDetail("bar", "foo").enhance(indicator);
 
         Health health = sut.health();
 
@@ -68,7 +68,7 @@ public class HealthDetailEnhancerTest {
                 .withDetail("foo", "bar")
                 .build());
         HealthDetailEnhancer sut = HealthDetailEnhancer
-            .create().withDetail("foo", "baz").enhance(indicator);
+            .withDetail("foo", "baz").enhance(indicator);
 
         Health health = sut.health();
 
