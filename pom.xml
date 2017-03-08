@@ -64,7 +64,7 @@
   </developers>
 
   <scm>
-    <connection>https://github.com/innoq/spring-boot-actuator-extensions</connection>
+    <connection>scm:git:https://github.com/innoq/spring-boot-actuator-extensions</connection>
     <developerConnection>scm:git:git@github.com:innoq/spring-boot-actuator-extensions.git</developerConnection>
     <url>https://github.com/innoq/spring-boot-actuator-extensions</url>
   </scm>
