@@ -1,15 +1,15 @@
 language: java
 sudo: false
 install: true
-
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 script:
-  - ./bin/travis.sh
-
+- "./bin/travis.sh"
 cache:
   directories:
-    - '$HOME/.m2'
-    - '$HOME/.sonar/cache'
-
+  - "$HOME/.m2"
+  - "$HOME/.sonar/cache"
+addons:
+  sonarqube:
+    token:
+      secure: h5I6eV9+VT8aeZEld/BI9otWMLvxnsGjK4XpTl/noHw6TBXdinUqgQ2RfFgrvbk3rtgkNgP61oGGDU3wzWqJrpKc2/hMjiYG3r4VsNqsDsFh67X+WqCqHfvG+DPNUHeaAYP6kdA1gVNG7TZuPscYPl4Oacxm8Uxchbe8rPZ/8gItIMRg7pOeNkWDUDj5dpUCNz1JukjvPCpT8C87jA5PNei5iwBIf6y6U9d35DKd3j0bFPdK3pWilwrs4uc3DYSQnI+Ci9baoIoK3f7DLY22cJS6S+MvzMO/zfyaxSzi8egeroJojyg6lrNZXzRAIa6bal8wFkhjy8uQw+LJMncvCp+XFDZHNAZ0+x5AgqHhLDvwln3lMtsInmjmKkPi+JzmfdESctobacP5h6LGEycv9VmokkBbQa9zAELVq92V+5biNjb/yDaS25DmRoyrbf9X++Yvyzz4nn4UzKhiovVSxyRlrsg9zocO3BzTSvWFOjGNuu5BkDeyEUz8ncXXQmHTLA7LD/cX0WJlZKm3VbKQLzX2B8zW7XlatTvlhztkOVLvxk/pZzZr9N4RXBVgRA7OA+74JStHjCN7zOlRY4pY6PpcTk7hZeMfjRf/S9MXkrv9oiFlJDVsqAbJK6UdfTAZ3IFWCR9CXjBG5zd+jUOZOZvKd5rVIsKx7BOPocX5ZcA=

@@ -26,28 +26,6 @@ warn()  { log "[!] $*";  }
 error() { log "[!!] $*"; }
 
 
-# check environment
-if [ -z "${TRAVIS_BRANCH}" ]; then
-  error "TRAVIS_BRANCH not set"
-  exit 1
-fi
-
-if [ -z "${TRAVIS_PULL_REQUEST}" ]; then
-  error "TRAVIS_PULL_REQUEQST not set"
-  exit 1
-fi
-
-#if [ -z "${SONAR_URI}" ]; then
-  #error "SONAR_URI not set"
-  #exit 1
-#fi
-
-#if [ -z "${SONAR_TOKEN}" ]; then
-  #error "SONAR_TOKEN not set"
-  #exit 1
-#fi
-
-
 # travis helper functions
 is_pull_request() {
   [ "${TRAVIS_PULL_REQUEST}" != "false" ]
@@ -58,19 +36,19 @@ on_master() {
 }
 
 
+# main
 main() {
   if is_pull_request; then
     log "Building Pull Request"
     ./mvnw -B -e test
   else
     log "Building branch: ${TRAVIS_BRANCH}"
-    #if on_master; then
-    #  ./mvnw -B -e \
-    #    clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar \
-    #    -Dsonar.host.url="${SONAR_URI}" -Dsonar.login="${SONAR_TOKEN}"
-    #else
-    ./mvnw -B -e test
-    #fi
+    if on_master; then
+      ./mvnw -B -e \
+        clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+    else
+      ./mvnw -B -e test
+    fi
   fi
 }
 
