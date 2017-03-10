@@ -99,29 +99,33 @@ public class FixedHealthAggregatorTest {
 
     @Test
     public void withStatus_should_return_cached_instance_for_status_unknown() throws Exception {
-        FixedHealthAggregator aggregator = FixedHealthAggregator.withStatus(Status.UNKNOWN);
+        FixedHealthAggregator first = FixedHealthAggregator.withStatus(Status.UNKNOWN);
+        FixedHealthAggregator second = FixedHealthAggregator.withStatus(Status.UNKNOWN);
 
-        assertThat(aggregator).isSameAs(FixedHealthAggregator.UNKNOWN);
+        assertThat(first).isSameAs(second);
     }
 
     @Test
     public void withStatus_should_return_cached_instance_for_status_up() throws Exception {
-        FixedHealthAggregator aggregator = FixedHealthAggregator.withStatus(Status.UP);
+        FixedHealthAggregator first = FixedHealthAggregator.withStatus(Status.UP);
+        FixedHealthAggregator second = FixedHealthAggregator.withStatus(Status.UP);
 
-        assertThat(aggregator).isSameAs(FixedHealthAggregator.UP);
+        assertThat(first).isSameAs(second);
     }
 
     @Test
     public void withStatus_should_return_cached_instance_for_status_down() throws Exception {
-        FixedHealthAggregator aggregator = FixedHealthAggregator.withStatus(Status.DOWN);
+        FixedHealthAggregator first = FixedHealthAggregator.withStatus(Status.DOWN);
+        FixedHealthAggregator second = FixedHealthAggregator.withStatus(Status.DOWN);
 
-        assertThat(aggregator).isSameAs(FixedHealthAggregator.DOWN);
+        assertThat(first).isSameAs(second);
     }
 
     @Test
     public void withStatus_should_return_cached_instance_for_status_outOfService() throws Exception {
-        FixedHealthAggregator aggregator = FixedHealthAggregator.withStatus(Status.OUT_OF_SERVICE);
+        FixedHealthAggregator first = FixedHealthAggregator.withStatus(Status.OUT_OF_SERVICE);
+        FixedHealthAggregator second = FixedHealthAggregator.withStatus(Status.OUT_OF_SERVICE);
 
-        assertThat(aggregator).isSameAs(FixedHealthAggregator.OUT_OF_SERVICE);
+        assertThat(first).isSameAs(second);
     }
 }

@@ -33,29 +33,10 @@ import static java.util.Objects.requireNonNull;
  */
 public final class FixedHealthAggregator extends AbstractHealthAggregator {
 
-    /**
-     * {@link FixedHealthAggregator} that always returns a health instance with status {@link
-     * Status#UNKNOWN}.
-     */
-    public static final FixedHealthAggregator UNKNOWN = new FixedHealthAggregator(Status.UNKNOWN);
-
-    /**
-     * {@link FixedHealthAggregator} that always returns a health instance with status {@link
-     * Status#UP}.
-     */
-    public static final FixedHealthAggregator UP = new FixedHealthAggregator(Status.UP);
-
-    /**
-     * {@link FixedHealthAggregator} that always returns a health instance with status {@link
-     * Status#DOWN}.
-     */
-    public static final FixedHealthAggregator DOWN = new FixedHealthAggregator(Status.DOWN);
-
-    /**
-     * {@link FixedHealthAggregator} that always returns a health instance with status {@link
-     * Status#OUT_OF_SERVICE}.
-     */
-    public static final FixedHealthAggregator OUT_OF_SERVICE =
+    private static final FixedHealthAggregator UNKNOWN = new FixedHealthAggregator(Status.UNKNOWN);
+    private static final FixedHealthAggregator UP = new FixedHealthAggregator(Status.UP);
+    private static final FixedHealthAggregator DOWN = new FixedHealthAggregator(Status.DOWN);
+    private static final FixedHealthAggregator OUT_OF_SERVICE =
         new FixedHealthAggregator(Status.OUT_OF_SERVICE);
 
 

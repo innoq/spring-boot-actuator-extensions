@@ -91,29 +91,33 @@ public class FixedHealthIndicatorTest {
 
     @Test
     public void withStatus_should_return_cached_instance_for_status_unknown() throws Exception {
-        FixedHealthIndicator indicator = FixedHealthIndicator.withStatus(Status.UNKNOWN);
+        FixedHealthIndicator first = FixedHealthIndicator.withStatus(Status.UNKNOWN);
+        FixedHealthIndicator second = FixedHealthIndicator.withStatus(Status.UNKNOWN);
 
-        assertThat(indicator).isSameAs(FixedHealthIndicator.UNKNOWN);
+        assertThat(first).isSameAs(second);
     }
 
     @Test
     public void withStatus_should_return_cached_instance_for_status_up() throws Exception {
-        FixedHealthIndicator indicator = FixedHealthIndicator.withStatus(Status.UP);
+        FixedHealthIndicator first = FixedHealthIndicator.withStatus(Status.UP);
+        FixedHealthIndicator second = FixedHealthIndicator.withStatus(Status.UP);
 
-        assertThat(indicator).isSameAs(FixedHealthIndicator.UP);
+        assertThat(first).isSameAs(second);
     }
 
     @Test
     public void withStatus_should_return_cached_instance_for_status_down() throws Exception {
-        FixedHealthIndicator indicator = FixedHealthIndicator.withStatus(Status.DOWN);
+        FixedHealthIndicator first = FixedHealthIndicator.withStatus(Status.DOWN);
+        FixedHealthIndicator second = FixedHealthIndicator.withStatus(Status.DOWN);
 
-        assertThat(indicator).isSameAs(FixedHealthIndicator.DOWN);
+        assertThat(first).isSameAs(second);
     }
 
     @Test
     public void withStatus_should_return_cached_instance_for_status_outOfService() throws Exception {
-        FixedHealthIndicator indicator = FixedHealthIndicator.withStatus(Status.OUT_OF_SERVICE);
+        FixedHealthIndicator first = FixedHealthIndicator.withStatus(Status.OUT_OF_SERVICE);
+        FixedHealthIndicator second = FixedHealthIndicator.withStatus(Status.OUT_OF_SERVICE);
 
-        assertThat(indicator).isSameAs(FixedHealthIndicator.OUT_OF_SERVICE);
+        assertThat(first).isSameAs(second);
     }
 }

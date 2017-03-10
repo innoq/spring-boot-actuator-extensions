@@ -29,29 +29,10 @@ import static java.util.Objects.requireNonNull;
  */
 public final class FixedHealthIndicator implements HealthIndicator {
 
-    /**
-     * {@link FixedHealthIndicator} that always returns a health instance with status {@link
-     * Status#UNKNOWN}.
-     */
-    public static final FixedHealthIndicator UNKNOWN = new FixedHealthIndicator(Status.UNKNOWN);
-
-    /**
-     * {@link FixedHealthIndicator} that always returns a health instance with status {@link
-     * Status#UP}.
-     */
-    public static final FixedHealthIndicator UP = new FixedHealthIndicator(Status.UP);
-
-    /**
-     * {@link FixedHealthIndicator} that always returns a health instance with status {@link
-     * Status#DOWN}.
-     */
-    public static final FixedHealthIndicator DOWN = new FixedHealthIndicator(Status.DOWN);
-
-    /**
-     * {@link FixedHealthIndicator} that always returns a health instance with status {@link
-     * Status#OUT_OF_SERVICE}.
-     */
-    public static final FixedHealthIndicator OUT_OF_SERVICE =
+    private static final FixedHealthIndicator UNKNOWN = new FixedHealthIndicator(Status.UNKNOWN);
+    private static final FixedHealthIndicator UP = new FixedHealthIndicator(Status.UP);
+    private static final FixedHealthIndicator DOWN = new FixedHealthIndicator(Status.DOWN);
+    private static final FixedHealthIndicator OUT_OF_SERVICE =
         new FixedHealthIndicator(Status.OUT_OF_SERVICE);
 
     private final Health health;
