@@ -40,7 +40,7 @@ on_master() {
 main() {
   if is_pull_request; then
     log "Building Pull Request: #${TRAVIS_PULL_REQUEST}"
-    if [ -n "${GITHUB_TOKEN-}" ]; then
+    if [ -n "${SONAR_GITHUB_TOKEN-}" ]; then
       ./mvnw -B -e \
         clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar \
         -Dsonar.analysis.mode=preview \
